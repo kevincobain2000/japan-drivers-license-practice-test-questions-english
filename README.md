@@ -13,7 +13,7 @@ Final driving written test exam in Japan as 100 questions, out of which 90 quest
 
 ## Japanese drivers license practice test app (English)
 
-https://kevincobain2000.github.io/japan-drivers-license-practice-test-questions-english
+https://kevincobain2000.github.io/japan-drivers-license-practice-test-questions-english/
 
 ## Found a mistake?
 
