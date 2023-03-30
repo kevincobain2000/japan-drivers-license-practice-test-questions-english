@@ -15,6 +15,20 @@ Final driving written test exam in Japan as 100 questions, out of which 90 quest
 
 https://kevincobain2000.github.io/japan-drivers-license-practice-test-questions-english/
 
+## Development notes
+
+```
+npm install
+npm run dev
+```
+
+## Deployment notes
+
+```
+npm install
+npm run export
+```
+
 ## Found a mistake?
 
 Submit a pull req to master
