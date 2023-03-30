@@ -1,0 +1,47 @@
+on:
+  push:
+    branches:
+      - master
+
+name: "CI Release Dist"
+
+jobs:
+  test:
+    name: Test
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-versions: [18]
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}    
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-versions }}
+
+      - name: NPM Install
+        run: npm install
+
+      - name: Lint, build/export
+        run: |
+          npm run lint
+          npm run export
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: (action) Update dist
+          title: '(action) update dist astro'
+
+
+
