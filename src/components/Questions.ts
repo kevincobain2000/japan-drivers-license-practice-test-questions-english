@@ -6,7 +6,6 @@ import path from 'path'
 const __dirname = path.resolve(path.dirname('./')); 
 const tsv = readFileSync(join(__dirname, 'questions.tsv'), 'utf8')
 
-console.log(tsvJSON(tsv))
 // convert tsv to json
 function tsvJSON(tsv: string) {
     const lines = tsv.split("\n");
