@@ -101,12 +101,18 @@ export default function App() {
         setCorrectlyAnswered(0);
         setIncorrectlyAnswered(0);
         setActiveTab("questions");
+        // scroll to top
+        window.scrollTo(0, 0);
     }
     const shuffle = (questions) => {
         for (let i = questions.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [questions[i], questions[j]] = [questions[j], questions[i]];
         }
+        questions.forEach((question) => {
+            question["chosenAnswer"] = null;
+            question["ansewered"] = null;
+        })        
         return questions;
     }
 
@@ -182,7 +188,8 @@ export default function App() {
                     <div className="form-control grid place-items-center text-center mt-5">
                         <label htmlFor="search" className="relative text-gray-400 focus-within:text-gray-600 block">
                             <MagnifyingGlassIcon className="pointer-events-none w-4 h-4 absolute top-1/2 transform -translate-y-1/2 left-3" />
-                            <input type="text" placeholder="Filter questions" className="input pl-10 input-sm input-bordered" onChange={(e) => handleSearch(e.target.value)} />
+                            <input type="text" placeholder="Filter questions"
+                                className="input pl-10 input-sm input-bordered text-black" onChange={(e) => handleSearch(e.target.value)} />
                         </label>
                     </div>
 
