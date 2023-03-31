@@ -33,7 +33,7 @@ export default function QuestionAnswer(props: Props) {
 
     return (
         <div className='grid place-items-center mt-10'>
-            <div className="card w-96 bg-neutral text-neutral-content">
+            <div className="card w-96 bg-neutral text-neutral-content rounded-none">
                 <div className="card-body ">
                     <span className='text-slate-500'>Question {index + 1}</span>
                     <p className='text-slate-200'>{question.question}</p>

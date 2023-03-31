@@ -4,10 +4,11 @@ import QuestionAnswer from '../elements/QuestionAnswer';
 import Fuse from 'fuse.js';
 
 import {
-    Cog6ToothIcon,
+    WrenchScrewdriverIcon,
     HomeIcon,
     MagnifyingGlassIcon,
     CheckBadgeIcon,
+    DocumentTextIcon,
     XCircleIcon,
     TrophyIcon
 } from '@heroicons/react/24/solid'
@@ -262,7 +263,6 @@ export default function App() {
                                         />
                                     </label>
                                 </div>
-                                <button className='btn btn-warning mt-5' onClick={reshuffleQuestions}>Reshuffle</button>
                             </div>
                         </div>
                     </div>
@@ -272,8 +272,11 @@ export default function App() {
                 <button className={activeTab == "questions" ? "active" : ""} onClick={() => setActiveTab("questions")}>
                     <HomeIcon className="h-5 w-5" /> Questions
                 </button>
+                <button className={activeTab == "reshuffle" ? "active" : ""} onClick={reshuffleQuestions}>
+                    <DocumentTextIcon className="h-5 w-5" /> Reshuffle
+                </button>
                 <button className={activeTab == "settings" ? "active" : ""} onClick={() => setActiveTab("settings")}>
-                    <Cog6ToothIcon className="h-5 w-5" /> Settings
+                    <WrenchScrewdriverIcon className="h-5 w-5" /> Settings
                 </button>
             </div>
         </>
