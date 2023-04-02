@@ -211,6 +211,10 @@ export default function App() {
                     <div className='grid place-items-center mt-10'></div>
                     <div className='grid place-items-center mt-10'></div>
                     <div className='grid place-items-center mt-10'></div>
+                    <div className='grid place-items-center mt-10'></div>
+                    <div className='grid place-items-center mt-10'></div>
+                    <div className='grid place-items-center mt-10'></div>
+                    <div className='grid place-items-center mt-10'></div>
 
                 </>
             }
@@ -253,7 +257,7 @@ export default function App() {
                                         <option>10</option>
                                         <option>50</option>
                                         <option>100</option>
-                                        <option>1000</option>
+                                        <option>1100 (All)</option>
                                     </select>
                                 </div>
                                 <div className="form-control">
