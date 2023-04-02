@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "export": "rm -rf ./docs && astro build",
+    "export": "rm -rf ./docs && astro build && touch docs/.nojekyll",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint \"src/**/*.{js,jsx,tsx}\"",
