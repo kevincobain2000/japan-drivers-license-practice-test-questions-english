@@ -4,7 +4,6 @@ import QuestionAnswer from '../elements/QuestionAnswer';
 import Fuse from 'fuse.js';
 
 import {
-    WrenchScrewdriverIcon,
     HomeIcon,
     MagnifyingGlassIcon,
     CheckBadgeIcon,
@@ -64,7 +63,7 @@ export default function App() {
         questions = shuffle(questions)
         setQuestions(questions);
 
-        setTotalCycles(Math.round(parsedQuestions.length/50));
+        setTotalCycles(Math.round(parsedQuestions.length / 50));
 
 
         const dataTheme = document.documentElement.getAttribute('data-theme');
@@ -99,15 +98,15 @@ export default function App() {
     }
 
     const cycleQuestions = () => {
-        let questions = questionsBackup.slice(currentCycle*50, (currentCycle+1)*50);
+        let questions = questionsBackup.slice(currentCycle * 50, (currentCycle + 1) * 50);
         console.log(totalCycles)
         if (currentCycle >= totalCycles) {
             console.log("last cycle")
-            questions = questionsBackup.slice(currentCycle*50, questionsBackup.length);
+            questions = questionsBackup.slice(currentCycle * 50, questionsBackup.length);
             setCurrentCycle(0);
         } else {
-            questions = questionsBackup.slice(currentCycle*50, (currentCycle+1)*50);
-            setCurrentCycle(currentCycle+1);
+            questions = questionsBackup.slice(currentCycle * 50, (currentCycle + 1) * 50);
+            setCurrentCycle(currentCycle + 1);
         }
         if (questions.length == 0) {
             questions = questionsBackup.slice(0, 50);
@@ -152,7 +151,7 @@ export default function App() {
                                                     <td className='text-success font-bold'>{correctlyAnswered}</td>
                                                     <td>
                                                         <span className='pl-10 pr-10 text-slate-500'>
-                                                            <b>{correctlyAnswered + incorrectlyAnswered}</b> of <b>{questions.length}</b> question
+                                                            <b>{correctlyAnswered + incorrectlyAnswered}</b> of <b>{questions.length}</b> questions
                                                         </span>
                                                     </td>
                                                 </tr>
@@ -163,7 +162,7 @@ export default function App() {
                                                     <td className='text-error'>{incorrectlyAnswered}</td>
                                                     <td className='text-slate-500'>
                                                         <span className='pl-10 pr-10'>
-                                                            <span className='text-slate-600'>{currentCycle+1} of {totalCycles+1} sets</span>
+                                                            <span className='text-slate-600'>{currentCycle + 1} of {totalCycles + 1} sets</span>
                                                         </span>
                                                     </td>
                                                 </tr>
@@ -211,6 +210,55 @@ export default function App() {
                         </label>
                     </div>
 
+                    <div className='grid place-items-center mt-5'>
+                        <div className="card w-96 bg-base-200 text-neutral-content rounded-none">
+                            <div className="card-body text-success">
+
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Dark Mode</span>
+                                        <input
+                                            type="checkbox"
+                                            onChange={toggleThemeMode}
+                                            className="toggle toggle-success"
+                                            checked={currentMode === "dark" ? true : false}
+                                        />
+                                    </label>
+                                </div>
+                                <div className="form-control w-full max-w-xs">
+                                    <input type="range" min="0" max="1100" value={questionsLimit} className="range" step="100" 
+                                            onChange={(e) => {
+                                            setQuestionsLimit(parseInt(e.target.value));
+                                            updateQuestions(parseInt(e.target.value));
+                                            setActiveTab("questions");
+                                            setCurrentCycle(0);
+                                        }}/>
+                                    <div className="w-full flex justify-between text-xs px-2 pt-3">
+                                        <span>No. of Questions</span>
+                                        <span>|</span>
+                                        <span>{500}</span>
+                                        <span>|</span>
+                                        <span>{questionsBackup.length}</span>
+                                    </div>
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Show all answers</span>
+                                        <input
+                                            type="checkbox"
+                                            onChange={(e) => {
+                                                setShowAllAnswers(e.target.checked);
+                                                setActiveTab("questions");
+                                            }}
+                                            className="toggle toggle-success"
+                                            checked={showAllAnswers}
+                                        />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     {showAllAnswers &&
                         <p className='grid place-items-center text-center mt-5 text-slate-500'>
                             Showing all answers with explainations.
@@ -236,79 +284,14 @@ export default function App() {
 
                 </>
             }
-            {activeTab === "settings" &&
-                <>
-                    <div className='grid place-items-center mt-5 sticky top-0 z-50'>
-                        <div className="card w-96 bg-base-200 text-neutral-content rounded-none">
-                            <div className="card-body text-success">
-                                <h2 className="card-title">
-                                    Settings
-                                </h2>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Dark Mode</span>
-                                        <input
-                                            type="checkbox"
-                                            onChange={toggleThemeMode}
-                                            className="toggle toggle-success"
-                                            checked={currentMode === "dark" ? true : false}
-                                        />
-                                    </label>
-                                </div>
-                                <div className="form-control w-full max-w-xs">
-                                    <label className="label">
-                                        <span className="label-text">Number of Questions</span>
-                                    </label>
-                                    <p className='text-slate-500 text-sm pb-2'>
-                                        Learners test has 50 questions, and final test has 100 questions.
-                                    </p>
-                                    <select
-                                        defaultValue={questionsLimit}
-                                        className="select select-bordered"
-                                        onChange={(e) => {
-                                            setQuestionsLimit(parseInt(e.target.value));
-                                            updateQuestions(parseInt(e.target.value));
-                                            setActiveTab("questions");
-                                            setCurrentCycle(0);
-                                        }
-                                        }
-                                    >
-                                        <option>10</option>
-                                        <option>50</option>
-                                        <option>100</option>
-                                        <option>1100 (All)</option>
-                                    </select>
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Show all answers</span>
-                                        <input
-                                            type="checkbox"
-                                            onChange={(e) => {
-                                                setShowAllAnswers(e.target.checked);
-                                                setActiveTab("questions");
-                                            }}
-                                            className="toggle toggle-success"
-                                            checked={showAllAnswers}
-                                        />
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </>
-            }
             <div className="btm-nav">
                 <button className={activeTab == "questions" ? "active" : ""} onClick={() => setActiveTab("questions")}>
                     <HomeIcon className="h-5 w-5" /> <b className='uppercase text-sm'>Questions</b>
                 </button>
                 <button className={activeTab == "reshuffle" ? "active" : ""} onClick={cycleQuestions}>
                     <ArrowPathIcon className="h-5 w-5" /> <b className='uppercase text-sm'>
-                    Set {currentCycle + 1}
+                        Set {currentCycle + 1}
                     </b>
-                </button>
-                <button className={activeTab == "settings" ? "active" : ""} onClick={() => setActiveTab("settings")}>
-                    <WrenchScrewdriverIcon className="h-5 w-5" /> <b className='uppercase text-sm'>Settings</b>
                 </button>
             </div>
         </>
