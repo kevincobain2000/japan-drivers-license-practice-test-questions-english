@@ -4,16 +4,16 @@ import QuestionAnswer from '../elements/QuestionAnswer';
 import Fuse from 'fuse.js';
 
 import {
-    HomeIcon,
+    SunIcon,
     MagnifyingGlassIcon,
     CheckBadgeIcon,
-    ArrowPathIcon,
+    MoonIcon,
     XCircleIcon,
     TrophyIcon
 } from '@heroicons/react/24/solid'
 
 export default function App() {
-    const [currentCycle, setCurrentCycle] = useState(0);
+    const [currentCycle, setCurrentCycle] = useState(1);
     const [totalCycles, setTotalCycles] = useState(0);
     const [currentMode, setCurrentMode] = useState("dark");
     const [questions, setQuestions] = useState([]);
@@ -33,6 +33,8 @@ export default function App() {
         setQuestions(questionsBackup.slice(0, num));
         setCorrectlyAnswered(0);
         setIncorrectlyAnswered(0);
+        setCurrentCycle(1);
+        setTotalCycles(Math.round(questionsBackup.length / num));
     }
 
     const handleSearch = (search: string) => {
@@ -97,20 +99,10 @@ export default function App() {
 
     }
 
-    const cycleQuestions = () => {
-        let questions = questionsBackup.slice(currentCycle * 50, (currentCycle + 1) * 50);
-        console.log(totalCycles)
-        if (currentCycle >= totalCycles) {
-            console.log("last cycle")
-            questions = questionsBackup.slice(currentCycle * 50, questionsBackup.length);
-            setCurrentCycle(0);
-        } else {
-            questions = questionsBackup.slice(currentCycle * 50, (currentCycle + 1) * 50);
-            setCurrentCycle(currentCycle + 1);
-        }
-        if (questions.length == 0) {
-            questions = questionsBackup.slice(0, 50);
-        }
+    const cycleQuestions = (cycle) => {
+        setCurrentCycle(cycle);
+        let questions = questionsBackup.slice(cycle * questionsLimit, (cycle + 1) * questionsLimit);
+
 
         questions = shuffle(questions);
         setQuestions(questions);
@@ -162,7 +154,7 @@ export default function App() {
                                                     <td className='text-error'>{incorrectlyAnswered}</td>
                                                     <td className='text-slate-500'>
                                                         <span className='pl-10 pr-10'>
-                                                            <span className='text-slate-600'>{currentCycle + 1} of {totalCycles + 1} sets</span>
+                                                            <span className='text-slate-600'>{currentCycle} of {totalCycles} sets</span>
                                                         </span>
                                                     </td>
                                                 </tr>
@@ -215,30 +207,27 @@ export default function App() {
                             <div className="card-body text-success">
 
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Dark Mode</span>
-                                        <input
-                                            type="checkbox"
-                                            onChange={toggleThemeMode}
-                                            className="toggle toggle-success"
-                                            checked={currentMode === "dark" ? true : false}
-                                        />
+                                    <label className="label swap swap-rotate">
+                                        <input type="checkbox" onChange={toggleThemeMode} />
+                                        {currentMode === 'dark' ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
                                     </label>
                                 </div>
                                 <div className="form-control w-full max-w-xs">
-                                    <input type="range" min="0" max="1100" value={questionsLimit} className="range" step="100" 
+                                    <input type="range" min="0" max="1100" value={questionsLimit} className="range range-info" step="50" 
                                             onChange={(e) => {
                                             setQuestionsLimit(parseInt(e.target.value));
                                             updateQuestions(parseInt(e.target.value));
-                                            setActiveTab("questions");
-                                            setCurrentCycle(0);
                                         }}/>
-                                    <div className="w-full flex justify-between text-xs px-2 pt-3">
-                                        <span>No. of Questions</span>
-                                        <span>|</span>
-                                        <span>{500}</span>
-                                        <span>|</span>
+                                    <div className="w-full flex justify-between text-xs px-2 pt-3 text-info">
+                                        <span># of Questions ({questions.length})</span>
                                         <span>{questionsBackup.length}</span>
+                                    </div>
+                                </div>
+                                <div className="form-control w-full max-w-xs mt-5">
+                                    <input type="range" min="1" max={totalCycles} value={currentCycle} className="range range-info" step="1"  onChange={(e) => cycleQuestions(parseInt(e.target.value))}/>
+                                    <div className="w-full flex justify-between text-xs px-2 pt-3 text-info">
+                                        <span>Set {currentCycle}</span>
+                                        <span>{totalCycles}</span>
                                     </div>
                                 </div>
                                 <div className="form-control">
@@ -250,7 +239,7 @@ export default function App() {
                                                 setShowAllAnswers(e.target.checked);
                                                 setActiveTab("questions");
                                             }}
-                                            className="toggle toggle-success"
+                                            className="toggle toggle-info"
                                             checked={showAllAnswers}
                                         />
                                     </label>
@@ -284,16 +273,6 @@ export default function App() {
 
                 </>
             }
-            <div className="btm-nav">
-                <button className={activeTab == "questions" ? "active" : ""} onClick={() => setActiveTab("questions")}>
-                    <HomeIcon className="h-5 w-5" /> <b className='uppercase text-sm'>Questions</b>
-                </button>
-                <button className={activeTab == "reshuffle" ? "active" : ""} onClick={cycleQuestions}>
-                    <ArrowPathIcon className="h-5 w-5" /> <b className='uppercase text-sm'>
-                        Set {currentCycle + 1}
-                    </b>
-                </button>
-            </div>
         </>
     );
 }
