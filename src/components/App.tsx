@@ -16,7 +16,7 @@ import {
 export default function App() {
     const [currentCycle, setCurrentCycle] = useState(0);
     const [totalCycles, setTotalCycles] = useState(0);
-    const [currentMode, setCurrentMode] = useState("night");
+    const [currentMode, setCurrentMode] = useState("dark");
     const [questions, setQuestions] = useState([]);
     const [questionsBackup, setQuestionsBackup] = useState([]);
     const [activeTab, setActiveTab] = useState("questions");
@@ -69,10 +69,10 @@ export default function App() {
 
         const dataTheme = document.documentElement.getAttribute('data-theme');
         if (!dataTheme) {
-            // check if night mode is enabled for browser
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: night)').matches) {
-                document.documentElement.setAttribute('data-theme', 'night');
-                setCurrentMode("night");
+            // check if dark mode is enabled for browser
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                setCurrentMode("dark");
             } else {
                 document.documentElement.setAttribute('data-theme', 'light');
                 setCurrentMode("light");
@@ -83,8 +83,8 @@ export default function App() {
     const toggleThemeMode = () => {
         const dataTheme = document.documentElement.getAttribute('data-theme');
         if (dataTheme) {
-            document.documentElement.setAttribute('data-theme', dataTheme === 'night' ? 'light' : 'night');
-            setCurrentMode(dataTheme === 'night' ? 'light' : 'night');
+            document.documentElement.setAttribute('data-theme', dataTheme === 'dark' ? 'light' : 'dark');
+            setCurrentMode(dataTheme === 'dark' ? 'light' : 'dark');
         }
 
     }
@@ -250,7 +250,7 @@ export default function App() {
                                             type="checkbox"
                                             onChange={toggleThemeMode}
                                             className="toggle toggle-success"
-                                            checked={currentMode === "night" ? true : false}
+                                            checked={currentMode === "dark" ? true : false}
                                         />
                                     </label>
                                 </div>
