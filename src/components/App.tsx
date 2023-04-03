@@ -57,7 +57,7 @@ export default function App() {
     useEffect(() => {
         const text = document.getElementById('questions').getAttribute('data-questions');
 
-        let parsedQuestions = JSON.parse(text)
+        const parsedQuestions = JSON.parse(text)
         setQuestionsBackup(parsedQuestions);
 
         let questions = parsedQuestions.slice(0, questionsLimit)
@@ -151,8 +151,8 @@ export default function App() {
                                                     </th>
                                                     <td className='text-success font-bold'>{correctlyAnswered}</td>
                                                     <td>
-                                                        <span className='pl-10 pr-10'>
-                                                            <b>{correctlyAnswered + incorrectlyAnswered}</b> of <b>{questions.length}</b> questions <span className='text-slate-500'>({currentCycle+1} of {totalCycles+1} sets)</span>
+                                                        <span className='pl-10 pr-10 text-slate-500'>
+                                                            <b>{correctlyAnswered + incorrectlyAnswered}</b> of <b>{questions.length}</b> question
                                                         </span>
                                                     </td>
                                                 </tr>
@@ -163,19 +163,21 @@ export default function App() {
                                                     <td className='text-error'>{incorrectlyAnswered}</td>
                                                     <td className='text-slate-500'>
                                                         <span className='pl-10 pr-10'>
+                                                            <span className='text-slate-600'>{currentCycle+1} of {totalCycles+1} sets</span>
                                                         </span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        <TrophyIcon className='w-5 h-5 inline' /> Result
+                                                        <TrophyIcon className='w-5 h-5 pb-1 inline text-warning' />
+                                                        <span className='uppercase text-warning'>Result</span>
                                                     </th>
                                                     <td className='font-bold'>
                                                         {(incorrectlyAnswered > 0 || correctlyAnswered > 0) && (
                                                             Math.round((correctlyAnswered / (correctlyAnswered + incorrectlyAnswered)) * 100) >= 90 ? (
-                                                                <span className='badge badge-success rounded-sm'>PASSING</span>
+                                                                <span className='text-success'>PASSING</span>
                                                             ) : (
-                                                                <span className='badge badge-error rounded-sm'>FAILING</span>
+                                                                <span className='text-error'>FAILING</span>
                                                             )
                                                         )}
 
@@ -188,7 +190,6 @@ export default function App() {
                                                                         style={{ "--value": Math.round((correctlyAnswered / (correctlyAnswered + incorrectlyAnswered)) * 100), "--size": "2.5rem" }}>
                                                                         <small>{Math.round((correctlyAnswered / (correctlyAnswered + incorrectlyAnswered)) * 100)}%</small>
                                                                     </div>
-                                                                    <span className='pl-2'>Score</span>
                                                                 </>
                                                             )}
                                                         </span>
