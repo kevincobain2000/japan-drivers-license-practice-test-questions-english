@@ -154,7 +154,7 @@ export default function App() {
                                                     <td className='text-error'>{incorrectlyAnswered}</td>
                                                     <td className='text-slate-500'>
                                                         <span className='pl-10 pr-10'>
-                                                            <span className='text-slate-600'>{currentCycle} of {totalCycles} sets</span>
+                                                            <span className='text-slate-600'>{currentCycle} of {totalCycles-1} sets</span>
                                                         </span>
                                                     </td>
                                                 </tr>
@@ -227,12 +227,12 @@ export default function App() {
                                     </div>
                                 </div>
                                 <div className="form-control w-full max-w-xs mt-5">
-                                    <input type="range" min="1" max={totalCycles} value={currentCycle} className="range range-info" step="1" onChange={(e) => cycleQuestions(parseInt(e.target.value))} />
+                                    <input type="range" min="1" max={totalCycles-1} value={currentCycle} className="range range-info" step="1" onChange={(e) => cycleQuestions(parseInt(e.target.value))} />
                                     <div className="w-full flex justify-between text-xs px-2 pt-3 text-info">
                                         <span>Set</span>
                                         <span>|</span>
                                         <span>|</span>
-                                        <span>{currentCycle} of {totalCycles}</span>
+                                        <span>{currentCycle} of {totalCycles-1}</span>
                                     </div>
                                 </div>
                                 <div className="form-control">
