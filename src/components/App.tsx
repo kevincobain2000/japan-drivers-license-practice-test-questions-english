@@ -194,40 +194,45 @@ export default function App() {
                         </div>
                     }
 
-                    <div className="form-control grid place-items-center text-center mt-5">
-                        <label htmlFor="search" className="relative block">
-                            <MagnifyingGlassIcon className="pointer-events-none w-4 h-4 absolute top-1/2 transform -translate-y-1/2 left-3" />
-                            <input type="text" placeholder="Filter questions"
-                                className="input pl-10 input-sm input-bordered" onChange={(e) => handleSearch(e.target.value)} />
-                        </label>
-                    </div>
+
 
                     <div className='grid place-items-center mt-5'>
                         <div className="card w-96 bg-base-200 text-neutral-content rounded-none">
-                            <div className="card-body text-success">
-
+                            <div className="card-body">
                                 <div className="form-control">
                                     <label className="label swap swap-rotate">
                                         <input type="checkbox" onChange={toggleThemeMode} />
                                         {currentMode === 'dark' ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
                                     </label>
                                 </div>
-                                <div className="form-control w-full max-w-xs">
-                                    <input type="range" min="0" max="1100" value={questionsLimit} className="range range-info" step="50" 
-                                            onChange={(e) => {
+                                <div className="form-control grid place-items-center text-center">
+                                    <label htmlFor="search" className="relative block">
+                                        <MagnifyingGlassIcon className="pointer-events-none w-4 h-4 absolute top-1/2 transform -translate-y-1/2 left-3" />
+                                        <input type="text" placeholder="Filter questions"
+                                            className="input pl-10 input-sm input-bordered" onChange={(e) => handleSearch(e.target.value)} />
+                                    </label>
+                                </div>
+                                <div className="form-control w-full max-w-xs mt-5">
+                                    <input type="range" min="0" max="1100" value={questionsLimit} className="range range-info" step="50"
+                                        onChange={(e) => {
                                             setQuestionsLimit(parseInt(e.target.value));
                                             updateQuestions(parseInt(e.target.value));
-                                        }}/>
+                                        }} />
                                     <div className="w-full flex justify-between text-xs px-2 pt-3 text-info">
-                                        <span># of Questions ({questions.length})</span>
-                                        <span>{questionsBackup.length}</span>
+                                        <span>Questions</span>
+                                        <span>|</span>
+                                        <span>|</span>
+                                        <span>|</span>
+                                        <span>{questions.length} of {questionsBackup.length}</span>
                                     </div>
                                 </div>
                                 <div className="form-control w-full max-w-xs mt-5">
-                                    <input type="range" min="1" max={totalCycles} value={currentCycle} className="range range-info" step="1"  onChange={(e) => cycleQuestions(parseInt(e.target.value))}/>
+                                    <input type="range" min="1" max={totalCycles} value={currentCycle} className="range range-info" step="1" onChange={(e) => cycleQuestions(parseInt(e.target.value))} />
                                     <div className="w-full flex justify-between text-xs px-2 pt-3 text-info">
-                                        <span>Set {currentCycle}</span>
-                                        <span>{totalCycles}</span>
+                                        <span>Set</span>
+                                        <span>|</span>
+                                        <span>|</span>
+                                        <span>{currentCycle} of {totalCycles}</span>
                                     </div>
                                 </div>
                                 <div className="form-control">
