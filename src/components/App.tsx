@@ -8,13 +8,15 @@ import {
     HomeIcon,
     MagnifyingGlassIcon,
     CheckBadgeIcon,
-    DocumentTextIcon,
+    ArrowPathIcon,
     XCircleIcon,
     TrophyIcon
 } from '@heroicons/react/24/solid'
 
 export default function App() {
-    const [currentMode, setCurrentMode] = useState("dark");
+    const [currentCycle, setCurrentCycle] = useState(0);
+    const [totalCycles, setTotalCycles] = useState(0);
+    const [currentMode, setCurrentMode] = useState("night");
     const [questions, setQuestions] = useState([]);
     const [questionsBackup, setQuestionsBackup] = useState([]);
     const [activeTab, setActiveTab] = useState("questions");
@@ -55,32 +57,34 @@ export default function App() {
     useEffect(() => {
         const text = document.getElementById('questions').getAttribute('data-questions');
 
-        setQuestionsBackup(JSON.parse(text));
+        let parsedQuestions = JSON.parse(text)
+        setQuestionsBackup(parsedQuestions);
 
-        let questions = JSON.parse(text).slice(0, questionsLimit)
+        let questions = parsedQuestions.slice(0, questionsLimit)
         questions = shuffle(questions)
         setQuestions(questions);
-    }, []);
 
-    useEffect(() => {
+        setTotalCycles(Math.round(parsedQuestions.length/50));
+
+
         const dataTheme = document.documentElement.getAttribute('data-theme');
         if (!dataTheme) {
-            // check if dark mode is enabled for browser
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                setCurrentMode("dark");
+            // check if night mode is enabled for browser
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: night)').matches) {
+                document.documentElement.setAttribute('data-theme', 'night');
+                setCurrentMode("night");
             } else {
                 document.documentElement.setAttribute('data-theme', 'light');
                 setCurrentMode("light");
             }
         }
-    }, [])
+    }, []);
 
     const toggleThemeMode = () => {
         const dataTheme = document.documentElement.getAttribute('data-theme');
         if (dataTheme) {
-            document.documentElement.setAttribute('data-theme', dataTheme === 'dark' ? 'light' : 'dark');
-            setCurrentMode(dataTheme === 'dark' ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', dataTheme === 'night' ? 'light' : 'night');
+            setCurrentMode(dataTheme === 'night' ? 'light' : 'night');
         }
 
     }
@@ -94,8 +98,21 @@ export default function App() {
 
     }
 
-    const reshuffleQuestions = () => {
-        let questions = questionsBackup.slice(0, questionsLimit);
+    const cycleQuestions = () => {
+        let questions = questionsBackup.slice(currentCycle*50, (currentCycle+1)*50);
+        console.log(totalCycles)
+        if (currentCycle >= totalCycles) {
+            console.log("last cycle")
+            questions = questionsBackup.slice(currentCycle*50, questionsBackup.length);
+            setCurrentCycle(0);
+        } else {
+            questions = questionsBackup.slice(currentCycle*50, (currentCycle+1)*50);
+            setCurrentCycle(currentCycle+1);
+        }
+        if (questions.length == 0) {
+            questions = questionsBackup.slice(0, 50);
+        }
+
         questions = shuffle(questions);
         setQuestions(questions);
         setCorrectlyAnswered(0);
@@ -112,7 +129,7 @@ export default function App() {
         questions.forEach((question) => {
             question["chosenAnswer"] = null;
             question["ansewered"] = null;
-        })        
+        })
         return questions;
     }
 
@@ -135,7 +152,7 @@ export default function App() {
                                                     <td className='text-success font-bold'>{correctlyAnswered}</td>
                                                     <td>
                                                         <span className='pl-10 pr-10'>
-                                                            <b>{correctlyAnswered + incorrectlyAnswered}</b> of <b>{questions.length}</b> questions
+                                                            <b>{correctlyAnswered + incorrectlyAnswered}</b> of <b>{questions.length}</b> questions <span className='text-slate-500'>({currentCycle+1} of {totalCycles+1} sets)</span>
                                                         </span>
                                                     </td>
                                                 </tr>
@@ -156,9 +173,9 @@ export default function App() {
                                                     <td className='font-bold'>
                                                         {(incorrectlyAnswered > 0 || correctlyAnswered > 0) && (
                                                             Math.round((correctlyAnswered / (correctlyAnswered + incorrectlyAnswered)) * 100) >= 90 ? (
-                                                                <span className='text-success'>PASSING</span>
+                                                                <span className='badge badge-success rounded-sm'>PASSING</span>
                                                             ) : (
-                                                                <span className='text-error'>FAILING</span>
+                                                                <span className='badge badge-error rounded-sm'>FAILING</span>
                                                             )
                                                         )}
 
@@ -186,10 +203,10 @@ export default function App() {
                     }
 
                     <div className="form-control grid place-items-center text-center mt-5">
-                        <label htmlFor="search" className="relative text-gray-400 focus-within:text-gray-600 block">
+                        <label htmlFor="search" className="relative block">
                             <MagnifyingGlassIcon className="pointer-events-none w-4 h-4 absolute top-1/2 transform -translate-y-1/2 left-3" />
                             <input type="text" placeholder="Filter questions"
-                                className="input pl-10 input-sm input-bordered text-black" onChange={(e) => handleSearch(e.target.value)} />
+                                className="input pl-10 input-sm input-bordered" onChange={(e) => handleSearch(e.target.value)} />
                         </label>
                     </div>
 
@@ -233,7 +250,7 @@ export default function App() {
                                             type="checkbox"
                                             onChange={toggleThemeMode}
                                             className="toggle toggle-success"
-                                            checked={currentMode === "dark" ? true : false}
+                                            checked={currentMode === "night" ? true : false}
                                         />
                                     </label>
                                 </div>
@@ -251,6 +268,7 @@ export default function App() {
                                             setQuestionsLimit(parseInt(e.target.value));
                                             updateQuestions(parseInt(e.target.value));
                                             setActiveTab("questions");
+                                            setCurrentCycle(0);
                                         }
                                         }
                                     >
@@ -281,13 +299,15 @@ export default function App() {
             }
             <div className="btm-nav">
                 <button className={activeTab == "questions" ? "active" : ""} onClick={() => setActiveTab("questions")}>
-                    <HomeIcon className="h-5 w-5" /> Questions
+                    <HomeIcon className="h-5 w-5" /> <b className='uppercase text-sm'>Questions</b>
                 </button>
-                <button className={activeTab == "reshuffle" ? "active" : ""} onClick={reshuffleQuestions}>
-                    <DocumentTextIcon className="h-5 w-5" /> Reshuffle
+                <button className={activeTab == "reshuffle" ? "active" : ""} onClick={cycleQuestions}>
+                    <ArrowPathIcon className="h-5 w-5" /> <b className='uppercase text-sm'>
+                    Set {currentCycle + 1}
+                    </b>
                 </button>
                 <button className={activeTab == "settings" ? "active" : ""} onClick={() => setActiveTab("settings")}>
-                    <WrenchScrewdriverIcon className="h-5 w-5" /> Settings
+                    <WrenchScrewdriverIcon className="h-5 w-5" /> <b className='uppercase text-sm'>Settings</b>
                 </button>
             </div>
         </>
