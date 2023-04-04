@@ -82,7 +82,7 @@ export default function QuestionAnswer(props: Props) {
                             }
                         </>
                     }
-                    {(question.explaination && question.explaination.toLowerCase() != "correct") && (showAllAnswers || question.answered) &&
+                    {(question.explaination && question.explaination.trim().toLowerCase() != "correct") && (showAllAnswers || question.answered) &&
                         <p className='text-slate-400 mt-4 text-info'>
                             <InformationCircleIcon className='w-5 h-5 inline' /> {question.explaination}
                         </p>
