@@ -220,10 +220,10 @@ export default function App() {
                                         }} />
                                     <div className="w-full flex justify-between text-xs px-2 pt-3">
                                         <span>Show questions</span>
-                                        <span>|</span>
+                                        <span>400</span>
                                         <span>|</span>
                                         <span>| </span>
-                                        <span>|</span>
+                                        <span>700</span>
                                         <span>|</span>
                                         <span>|</span>
                                         <span>{questionsBackup.length}+</span>
