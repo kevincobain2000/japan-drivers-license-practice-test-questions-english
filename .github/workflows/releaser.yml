@@ -37,12 +37,15 @@ jobs:
           npm run lint
           npm run export
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+      - name: .nojekyll
+        run: touch ./docs/.nojekyll          
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: (action) Update dist
-          title: '(action) update dist astro'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
 
 
 
