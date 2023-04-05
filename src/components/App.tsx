@@ -238,16 +238,18 @@ export default function App() {
                                         <span>{currentCycle} of {totalCycles-1}</span>
                                     </div>
                                 </div>
-                                <div className="form-control">
+                                <div className="form-control mt-1">
                                     <label className="label">
-                                        <span className="label-text">Show all answers</span>
+                                        <span className="label-text">
+                                            Display answers
+                                        </span>
                                         <input
                                             type="checkbox"
                                             onChange={(e) => {
                                                 setShowAllAnswers(e.target.checked);
                                                 setActiveTab("questions");
                                             }}
-                                            className="toggle toggle-info"
+                                            className="toggle toggle-warning"
                                             checked={showAllAnswers}
                                         />
                                     </label>
