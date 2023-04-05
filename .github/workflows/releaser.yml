@@ -19,7 +19,7 @@ jobs:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
         with:
-          access_token: ${{ github.token }}    
+          access_token: ${{ github.token }}
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -38,7 +38,7 @@ jobs:
           npm run export
 
       - name: .nojekyll
-        run: touch ./docs/.nojekyll          
+        run: touch ./docs/.nojekyll
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
