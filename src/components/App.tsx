@@ -218,8 +218,8 @@ export default function App() {
                                             setQuestionsLimit(parseInt(e.target.value));
                                             updateQuestions(parseInt(e.target.value));
                                         }} />
-                                    <div className="w-full flex justify-between text-xs px-2 pt-">
-                                        <span>Questions</span>
+                                    <div className="w-full flex justify-between text-xs px-2 pt-3">
+                                        <span>Show questions</span>
                                         <span>|</span>
                                         <span>|</span>
                                         <span>| </span>
@@ -232,7 +232,7 @@ export default function App() {
                                 <div className="form-control w-full max-w-xs mt-5">
                                     <input type="range" min="1" max={totalCycles-1} value={currentCycle} className="range range-warning" step="1" onChange={(e) => cycleQuestions(parseInt(e.target.value))} />
                                     <div className="w-full flex justify-between text-xs px-2 pt-3 text-warning">
-                                        <span>Set</span>
+                                        <span>Change Set</span>
                                         <span>|</span>
                                         <span>|</span>
                                         <span>{currentCycle} of {totalCycles-1}</span>
