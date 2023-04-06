@@ -502,7 +502,7 @@ When getting out of a vehicle, you should open the door a little bit and check w
 On a road where the centerline is yellow, cross the centerline into the right hand side of the road in order to overtake another motor vehicles or mopeds is prohibited.		true	Correct
 When the engine is overheating, it is better to stop the engine immediately.		false	When the engine is overheated, first stop your vehicle on the left side of the road. Then before you stop the engine, check the radiator whether it’s working normaly or not. When it’s working normaly, wait until the engine becomes cool then add coolant.
 Stopping is permitted in a tunnel with vehicle lanes.		false	Stopping is prohibited in a tunnel even they have vehicle lanes.
-When you load on a truck, you may load exceeding 0.3m on eigher side.		false	Width must be as same as the width of the vehicle and you must not exceed.
+When you load on a truck, you may load exceeding 0.3m on either side.		false	Width must be as same as the width of the vehicle and you must not exceed.
 On a street with this road sign, it indicates two step right turn for a moped.	img-x-original-x-01-x-A-x-1規制-41原付右折二段階.jpg	true	Correct
 When the engine is overheating, it’s better to stop the engine immediately.		false	When the engine is overheating, stop your vehicle in a safe place and check the radiator under the hood. If the radiator is still keep working, you’d better keep the engine on until under the hood becomes cool.
 At an intersection of two roads crossing, the road that the centerline and vehicle lanes go through the intersection is a priority road.		true	Correct
@@ -513,7 +513,7 @@ The maximum legel speed limit of a large motorcycle on a general road is 60km/h.
 When you miss your exit while driving on the main vehicle lane of a national expressway, it is possible to back your car up to the exit after checking the safety.		false	When you miss your exit, you must go to the next exit as U-turn and reversing are prohibited on expressways.
 Vehicles must not drive on a safety zone except in unavoidable situations to avoid danger.		false	Vehciles must not drive on a safety zone under any situations. No exceptions.
 The maximum legal speed of large passenger vehicles and large motorcycles on a national expressway is 100km/h.		true	Correct
-As vehicles can not stop immediately, you must always keep enough distance between your vehicle and a vehilce in front of you to stop safely.		true	Correct
+As vehicles can not stop immediately, you must always keep enough distance between your vehicle and a vehicle in front of you to stop safely.		true	Correct
 This road marking indicates no entry zone.	img-x-original-x-03-x-A-x-7規制標示-07立入り禁止部分.jpg	true	Correst
 The seating capacity of a vehicle is the one stated in the inspection certificate including the driver.		true	Correct
 When riding a motorcycle at a high speed, you must bend your body forward as much as possible to avoid wind resistance.		false	When riding a motorcycle, you must take a correct posture in any situation.
@@ -534,7 +534,7 @@ Drivers are prohibited from sudden pull away, sudden acceleration or revive engi
 On a street with this road sign, it is illegal to change lane for overtaking.	img-x-original-x-01-x-A-x-1規制-17追越し禁止.jpg	true	Correct
 Vehicles use the friction between the tires and the road surface to start/stop.		true	Correct
 Within 1m of a fire alarm, stopping is permitted but parking is prohibited.		true	Correct
-When a driver purchases optional insurance, the driver dose not need to purchase third party liability automobile insurance.		false	All motor vehicles (except for special light equipments) and mopeds must purchase compulsory insurance (third party liability automobile insurance or compulsory automobile liability mutual relief, etc) and are recommended to purchase optional insurance.
+When a driver purchases optional insurance, the driver does not need to purchase third party liability automobile insurance.		false	All motor vehicles (except for special light equipments) and mopeds must purchase compulsory insurance (third party liability automobile insurance or compulsory automobile liability mutual relief, etc) and are recommended to purchase optional insurance.
 Within a period of regulation of traffic, you must not use this lane with this road marking, except you drive a designated vehicle, a special light equipment, a moped or a light vehicle.	img-x-03044-x-03-x-A-x-専用通行帯.gif	true	Correct
 If you have a regular motor vehicle license, you can drive a truck with a maximum loading capacity of 3,000kg.		false	With a regular motor vehicle license, you can drive a truck with a maximum loading capacity below 3,000kg. ”Below” means numbers smaller than but not including the number cited.
 The timing to signal for a left/right turn is approximately 3 seconds before turning.		false	The timing to signal for a left/right turn is 30 meters before turning.
@@ -801,7 +801,7 @@ When riding a motorcycle, it is better to relax your shoulder and bend your elbo
 If the moped has a passenger seat, we can have one passenger.		false	The seating capacity of mopeds is one.
 The higher gear has the stronger engine brake.		false	If we use the higher gear, the engine brake gets weaker.
 The centrifugal force increases in the double of the speed.		false	The centrifugal force increases in the square of the speed.
-In a passenger vehicle with a seating capacity of 6, 3 adults and 3 children below 12 years old can get in this vhielce.		true	correct
+In a passenger vehicle with a seating capacity of 6, 3 adults and 3 children below 12 years old can get in this vehicle.		true	correct
 When we inspect the motorcycles, we must check the tension of the chain with pressing the center of the chain with our fingers.		true	correct
 Large passenger vehicles have the same speed limit on the national expressway as large trucks.		false	On national expressways, the maximum speed limit of large passenger vehicles is 100km/h, but the maximum speed limit of large trucks is 80km/h.
 ☆When choosing a motorcycle, our both toes should be touched the ground.		true	correct
@@ -819,18 +819,18 @@ When riding motorcycles, we must wear clothes which is minimum  exposure.		true	
 This road marking means “No parking or stopping”.	img-x-original-x-03-x-A-x-7規制標示-04駐停車禁止.jpg	true	correct
 This road marking inticates ”No entry zone.”	img-x-original-x-03-x-A-x-7規制標示-08停止禁止部分.jpg	false	This road marking indicates ”No stopping zone.”
 ☆This sign indeicates ”No U-turn.”	img-x-original-x-01-x-A-x-1規制-15転回禁止.jpg	true	correct
-When a police officer stretches his arms vertically, this hand signal is the same as the red signal for the vehicles traveling prarallel to the police officer’s body.	img-x-original-x-05-x-1項目02-1-3-1-手信号10.jpg	false	This hand signal indicates yellow signal.
+When a police officer stretches his arms vertically, this hand signal is the same as the red signal for the vehicles traveling parallel to the police officer’s body.	img-x-original-x-05-x-1項目02-1-3-1-手信号10.jpg	false	This hand signal indicates yellow signal.
 ☆This sign indicates ”Slowing down.”	img-x-original-x-01-x-A-x-1規制-45徐行.jpg	true	correct
 Driving on a muddy road, it is important to drive in the lower gear.		true	correct
-You chose a motorcycle that could do figure eights but could not use the center stand easily or touch both your toes to the graound.		false	We need to choose a motorcycle that suits our physique. We need to choose a motorcycle that we can do figure eights, can use the center stand easily, and can touch both our toes to the ground.
+You chose a motorcycle that could do figure eights but could not use the center stand easily or touch both your toes to the ground.		false	We need to choose a motorcycle that suits our physique. We need to choose a motorcycle that we can do figure eights, can use the center stand easily, and can touch both our toes to the ground.
 ☆The timing of giving signals to make a left turn and right turn is 3 seconds before the turn.		false	The timing of giving signals to make a left turn and right turn is 30 meters before the turn.
 ☆This sign indicates ”No right turn.”	img-x-original-x-01-x-A-x-1規制-14車両横断禁止.jpg	false	This sign indicates ”No crossing.”
 When moped riders make a square right turn, they do not need to give the signal.		false	When making a square right turn, we must signal. We must start to signal to the right 30m before the intersection and then we must turn off the signal after we cross the first intersection.
-☆On a one way road,we can park vehicles on the right side of the road.		false	Even if we park on a one way road, we must park on the left side of the road.
+☆On a one-way road,we can park vehicles on the right side of the road.		false	Even if we park on a one way road, we must park on the left side of the road.
 On a slope, because it is more difficult to start on an uphill, vehicles on a downhill should yield to the vehicle on an uphill.		true	correct
-☆When passing the oncoming vehicle with high beam, I turned off the headlight.		false	When passing the oncoming vehicle, we must dim our headlight or switch it to low beam.
+☆When passing the oncoming vehicle with a high beam, I turned off the headlight.		false	When passing the oncoming vehicle, we must dim our headlight or switch it to low beam.
 Mopeds can drive on the exclusive lane for buses.		true	correct
-☆Besides the driver, also all passengers must wear the seat belts.		true	correct
+☆Besides the driver, also all passengers must wear seat belts.		true	correct
 When there is this sign, vehicles must not turn right.	img-x-original-x-01-x-A-x-1規制-13指定方向外禁止1.jpg	true	correct
 ☆When we are facing this police officer, this light signal is same as the red light.	img-x-original-x-05-x-1項目02-1-3-1-手信号32.jpg	true	correct
 This road marking indicates ”No entry zone.”	img-x-original-x-03-x-A-x-7規制標示-07立入り禁止部分.jpg	true	correct
@@ -893,10 +893,10 @@ I stop within 1 meter of the fire hydrant to drop off a passenger.		true	This is
 I parked my car in a prohibited zone and I found an illegal parking sticker on my car. I removed it by myself.		true	The sticker confirming the left vehicle can only be removed by the user, driver of the vehicle or the person who is responsible for the vehicle.
 When policeman raises his hands verically as shown in this picture, vehicles passing in the directions shown must stop.	img-x-original-x-05-x-1項目02-1-3-1-手信号10.jpg	true	The meaning of the hand signal is amber for vehicles passing in the directions.
 When parking on a side strip, you have to keep at least 0.75 meters on the left side for pedestrians.		true	This is a correct answer.
-You should use a child seat on a passenger seat equiped with an airbag.		false	If you use a child seat on a front passenger seat equiped with an airbag, the passenger seat should be pulled back as far as possible, with the child seat secured facing forward.
+You should use a child seat on a passenger seat equipped with an airbag.		false	If you use a child seat on a front passenger seat equiped with an airbag, the passenger seat should be pulled back as far as possible, with the child seat secured facing forward.
 This road sign indicates U-turns are not allowed.	img-x-original-x-01-x-A-x-1規制-14車両横断禁止.jpg	false	This sign indicates No crossing.
 The car which has this mark means the driver has no confidence in driving.	img-x-original-x-08-x-1項目01-3-6-Note初心者マ.jpg	false	Within one year of acquiring their regular license, drivers must attach the biginner driver’s sign at the designated places on the front and rear of their vehicles when driving a regular motor vehicle.
-Lights must be on only when you drive at night and you cannot use them during the day time.		false	When you drive a vehicle at night, the head lights, side marker lamps/side reflectors and tail lights must be on. The same rule applies during the daytime in tunnels, dense fog or on other occations when you can not see 50 meters (200 meters on expressways) in front of you.
+Lights must be on only when you drive at night and you cannot use them during the day time.		false	When you drive a vehicle at night, the head lights, side marker lamps/side reflectors and tail lights must be on. The same rule applies during the daytime in tunnels, dense fog or on other occasions when you can not see 50 meters (200 meters on expressways) in front of you.
 If you pass by a safety zone of a street car stop within 1.5meters, you do not have to slow down when there are no pedestrians getting on or off the streetcar.		false	In this situation, drivers must slow down.
 This road marking indicates a stopping prohibited zone.	img-x-original-x-03-x-A-x-7規制標示-07立入り禁止部分.jpg	false	This road marking indicates a no entry zone.
 On a dangerous cliff road, the car on the cliff side should give way to the oncoming vehicles regardless of their direction on the slope.		true	This is a correct answer.
@@ -908,12 +908,12 @@ When the vehicle ahead of you is turning right, you should overtake by moving to
 At the entrance or exit of tunnel, I slowed down so as to adjust the dark/light adaptation.		true	This answer is correct. At the entrance or exit of tunnel, you should slow down so as to adjust the dark/light adaptation. But, if the question ask you, you must slow down in this location, the answer is FALSE.
 If you have to stop an automatic vehicle on a steep upgrade because of a red traffic light, you also better use your parking brake.		true	This answer is correct.
 It is allowed to have 3 adults and 3 children in a vehicle for 5 people capacity.		true	Three children below 12 years old are considered as two adults.
-When you already are entered a tunnel, you dont need to slow down anymore.		false	You do not need to slow down, when you enter or leave a tunnel. But, when you are driving in the tunnel, you still need to slow down somewhere. Because you have possibility for avoiding danger locations.
+When you already are entered a tunnel, you don't need to slow down anymore.		false	You do not need to slow down, when you enter or leave a tunnel. But, when you are driving in the tunnel, you still need to slow down somewhere. Because you have possibility for avoiding danger locations.
 Stopping distance is the total of reaction distance and braking distance.		true	This answer is correct.
 When driving by a visually impaired pedestrian carrying a white or yellow cane, you should always warn him by sounding your horn.		false	When a visually impaired pedestrian is walking and using a white or yellow cane, the drivers must stop or slow down to allow the pedestrian to pass safely.
 On a rainy night the light reflects of the shiny surface of the road, so it is safer to drive.		false	When it is rainy, the surface of the roads become slippery and the stopping distance become longer in high speed. Drive at a slower speed and increase the distance between vehicles.
 When you are going to change a lane, you should check security and change the lane afterwards.		true	That is correct.
-This sign indicates that turning right or travering straight is prohibited.	img-x-original-x-01-x-A-x-1規制-13指定方向外禁止2.jpg	true	This is a correct answer.
+This sign indicates that turning right or travelling straight is prohibited.	img-x-original-x-01-x-A-x-1規制-13指定方向外禁止2.jpg	true	This is a correct answer.
 If a car crashed on a concrete wall at 60 km/h, it has an equal impact of a car falling from the 5th floor. (14m height approx.)		true	This is a correct answer.
 The most suited motorcycle for me is the one which both my toes could reach the ground.		true	This answer is correct.
 All vehicles take motor vehicle inspection. The inspection sticker must be put on the windshield.		false	When a motor vehicle passes the vehicle inspection test, it wiil be issued with an inspection sticker as well as the motor vehicle inspection certificate. The inspection sticker must be put on the windshield. But, regular motorcycles with a displacement 250cc or less and special light equipments are not inspected the motor vehicle inspection.
@@ -921,7 +921,7 @@ A person with regular vehicle license can drive special light equipment vehicles
 A beginner driver of a regular vehicle must use a beginner drivers mark for a year, but its not necessary for a beginner driver of a large size truck.		true	This answer is correct. But, when the beginner driver is driving a regular truck, the driver must use the beginner driver’s mark.
 When you are towing a broken down vehicle you must keep a security distance of less than 5 meters between both vehicles.		true	This is a correct answer.
 This sign indicates road closed to all vehicles.	img-x-original-x-01-x-A-x-1規制-01通行止め.jpg	false	This sign indicates the road is closed to pedestrians, vehicles and streetcars.
-When the police officers gave hand signal which contradict the traffic light, you must obey the traffic light.		false	When the police officers gave hand signal which contradict the traffic light,you are required to obey the hand signals.
+When the police officers gave hand signal which contradicts the traffic light, you must obey the traffic light.		false	When the police officers gave hand signal which contradict the traffic light,you are required to obey the hand signals.
 At an intersection of two roads crossing, the road that the center line and vehicle lanes are constantly drawn in the intersection is the priority road.		true	This answer is correct.
 When a police officer gives a hand signal that conflicts with a traffic light, you must obey the traffic light.		false	When a police officer gives a hand signal that conflicts with a traffic light, you must obey the police officer’s hand signal.
 You only use your rear brake if you need to stop suddenly when riding a motorcycle.		false	Sudden braking on a motorcycle may lock the wheels causing you skid. Apply the front and rear brake simultaneously several times.

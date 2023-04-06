@@ -138,7 +138,8 @@ export default function App() {
                                             <tbody>
                                                 <tr>
                                                     <th className='text-success font-bold'>
-                                                        <CheckBadgeIcon className='w-5 h-5 inline' /> Correct
+                                                        <CheckBadgeIcon className='w-5 h-5 inline' />
+                                                        <span className='pl-1'>Correct</span>
                                                     </th>
                                                     <td className='text-success font-bold'>{correctlyAnswered}</td>
                                                     <td>
@@ -149,19 +150,20 @@ export default function App() {
                                                 </tr>
                                                 <tr>
                                                     <th className='text-error'>
-                                                        <XCircleIcon className='w-5 h-5 inline' /> Wrong
+                                                        <XCircleIcon className='w-5 h-5 inline' />
+                                                        <span className='pl-1'>Wrong</span>
                                                     </th>
                                                     <td className='text-error'>{incorrectlyAnswered}</td>
                                                     <td className='text-slate-500'>
                                                         <span className='pl-10 pr-10'>
-                                                            <span className='text-slate-600'>{currentCycle} of {totalCycles-1} sets</span>
+                                                            <span className='text-slate-500'>Exercise <b>No.{currentCycle}</b></span>
                                                         </span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th>
                                                         <TrophyIcon className='w-5 h-5 pb-1 inline text-warning' />
-                                                        <span className='uppercase text-warning'>Result</span>
+                                                        <span className='uppercase text-warning pl-1'>Result</span>
                                                     </th>
                                                     <td className='font-bold'>
                                                         {(incorrectlyAnswered > 0 || correctlyAnswered > 0) && (
@@ -219,12 +221,10 @@ export default function App() {
                                             updateQuestions(parseInt(e.target.value));
                                         }} />
                                     <div className="w-full flex justify-between text-xs px-2 pt-3">
-                                        <span>Show questions</span>
+                                        <span>Questions (50)</span>
                                         <span>400</span>
                                         <span>|</span>
-                                        <span>| </span>
                                         <span>700</span>
-                                        <span>|</span>
                                         <span>|</span>
                                         <span>{questionsBackup.length}+</span>
                                     </div>
@@ -232,7 +232,7 @@ export default function App() {
                                 <div className="form-control w-full max-w-xs mt-5">
                                     <input type="range" min="1" max={totalCycles-1} value={currentCycle} className="range range-warning" step="1" onChange={(e) => cycleQuestions(parseInt(e.target.value))} />
                                     <div className="w-full flex justify-between text-xs px-2 pt-3 text-warning">
-                                        <span>Change Set</span>
+                                        <span>Exercise</span>
                                         <span>|</span>
                                         <span>|</span>
                                         <span>{currentCycle} of {totalCycles-1}</span>
