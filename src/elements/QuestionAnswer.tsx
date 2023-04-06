@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import {
     CheckBadgeIcon,
-    QuestionMarkCircleIcon,
     InformationCircleIcon,
     XCircleIcon
 } from '@heroicons/react/24/solid'
@@ -38,7 +37,7 @@ export default function QuestionAnswer(props: Props) {
             <div className="card w-96 bg-neutral text-neutral-content rounded-none">
                 <div className="card-body ">
                     <span className='text-slate-500'>
-                        <QuestionMarkCircleIcon className='w-5 h-5 inline' /> Question {index + 1}
+                        Q.{index + 1}
                     </span>
                     <p className='text-slate-200'>{question.question}</p>
                     {question.img != "" &&
@@ -70,13 +69,13 @@ export default function QuestionAnswer(props: Props) {
                             <div className='divider'></div>
                             {question.answer !== question.chosenAnswer &&
                                 <div className='text-error uppercase font-bold'>
-                                    <XCircleIcon className='w-5 h-5 inline' /> Wrong
+                                    <XCircleIcon className='w-5 h-5 inline pb-1' /> Wrong
                                 </div>
                             }
                             {question.answer === question.chosenAnswer &&
 
                                 <div className='text-success uppercase font-bold'>
-                                    <CheckBadgeIcon className='w-5 h-5 inline' /> Correct
+                                    <CheckBadgeIcon className='w-5 h-5 inline pb-1' /> Correct
                                 </div>
 
                             }
@@ -84,7 +83,7 @@ export default function QuestionAnswer(props: Props) {
                     }
                     {(question.explaination && question.explaination.trim().toLowerCase() != "correct") && (showAllAnswers || question.answered) &&
                         <p className='text-slate-400 mt-4 text-info'>
-                            <InformationCircleIcon className='w-5 h-5 inline' /> {question.explaination}
+                            <InformationCircleIcon className='w-5 h-5 inline pb-1' /> {question.explaination}
                         </p>
                     }
                 </div>
