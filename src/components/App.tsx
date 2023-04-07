@@ -26,7 +26,7 @@ export default function App() {
     const [incorrectlyAnswered, setIncorrectlyAnswered] = useState(0);
 
     const searchOptions = {
-        keys: ['question'],
+        keys: ['question', 'explaination'],
         threshold: 0.3
     };
 
