@@ -13,6 +13,7 @@ import {
 } from '@heroicons/react/24/solid'
 
 export default function App() {
+    const [search, setSearch] = useState("");
     const [currentCycle, setCurrentCycle] = useState(1);
     const [totalCycles, setTotalCycles] = useState(0);
     const [currentMode, setCurrentMode] = useState("dark");
@@ -38,12 +39,13 @@ export default function App() {
     }
 
     const handleSearch = (search: string) => {
+        setSearch(search);
         search = search.trim()
         if (!search) {
             setQuestions(questionsBackup.slice(0, questionsLimit));
             return
         }
-        const fuse = new Fuse(questions, searchOptions);
+        const fuse = new Fuse(questionsBackup, searchOptions);
 
         const filteredData = fuse.search(search);
         const filteredQuestions: [] = []
@@ -100,6 +102,7 @@ export default function App() {
     }
 
     const cycleQuestions = (cycle) => {
+        setSearch("");
         setCurrentCycle(cycle);
         let questions = questionsBackup.slice(cycle * questionsLimit, (cycle + 1) * questionsLimit);
 
@@ -109,8 +112,6 @@ export default function App() {
         setCorrectlyAnswered(0);
         setIncorrectlyAnswered(0);
         setActiveTab("questions");
-        // scroll to top
-        window.scrollTo(0, 0);
     }
     const shuffle = (questions) => {
         for (let i = questions.length - 1; i > 0; i--) {
@@ -211,10 +212,12 @@ export default function App() {
                                     <label htmlFor="search" className="relative block">
                                         <MagnifyingGlassIcon className="pointer-events-none w-4 h-4 absolute top-1/2 transform -translate-y-1/2 left-3" />
                                         <input type="text" placeholder="Filter questions"
-                                            className="input pl-10 input-sm input-bordered" onChange={(e) => handleSearch(e.target.value)} />
+                                            className="input pl-10 input-sm input-bordered"
+                                            value={search}
+                                            onChange={(e) => handleSearch(e.target.value)} />
                                     </label>
                                 </div>
-                                <div className="form-control w-full max-w-xs mt-5">
+                                {/* <div className="form-control w-full max-w-xs mt-5">
                                     <input type="range" min="0" max="1100" value={questionsLimit} className="range" step="50"
                                         onChange={(e) => {
                                             setQuestionsLimit(parseInt(e.target.value));
@@ -228,11 +231,16 @@ export default function App() {
                                         <span>|</span>
                                         <span>{questionsBackup.length}+</span>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="form-control w-full max-w-xs mt-5">
                                     <input type="range" min="1" max={totalCycles-1} value={currentCycle} className="range range-warning" step="1" onChange={(e) => cycleQuestions(parseInt(e.target.value))} />
                                     <div className="w-full flex justify-between text-xs px-2 pt-3 text-warning">
                                         <span>Exercise</span>
+                                        <span>|</span>
+                                        <span>|</span>
+                                        <span>|</span>
+                                        <span>|</span>
+                                        <span>|</span>
                                         <span>|</span>
                                         <span>|</span>
                                         <span>{currentCycle} of {totalCycles-1}</span>
