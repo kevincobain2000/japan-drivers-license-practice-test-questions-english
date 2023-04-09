@@ -157,7 +157,7 @@ export default function App() {
                                                     <td className='text-error'>{incorrectlyAnswered}</td>
                                                     <td className='text-slate-500'>
                                                         <span className='pl-10 pr-10'>
-                                                            <span className='text-slate-500'>Exercise <b>No.{currentCycle}</b></span>
+                                                            <span className='text-slate-500'>Exercise <b className='text-warning'>No.{currentCycle}</b></span>
                                                         </span>
                                                     </td>
                                                 </tr>

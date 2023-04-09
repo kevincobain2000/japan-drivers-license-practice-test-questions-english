@@ -735,7 +735,7 @@ The road sign indicates `Right of way(priority road)`.	img-x-original-x-01-x-A-x
 When you park your vehicle on parking is prohibited area with the engine running, it is no considered as parking regardless how long you are parking.		false	You can not park where parking is prohibited even if the engine is running.
 A passenger vehicle with a seating capacity of 6 allows 3 adults, 3 children, plus the driver.		true	correct
 A center line is not always printed in the center of a road.		true	correct
-If you notice your brake doesn`t work on a downgrade, you must shift to neutral.		false	When the brake doen`t work properly on a downgrade, shift the gear down quickly to use engine brake and apply the hand brake.
+If you notice your brake doesn`t work on a downgrade, you must shift to neutral.		false	When the brake doesn`t work properly on a downgrade, shift the gear down quickly to use engine brake and apply the hand brake.
 If there are 3 vehicle lanes in the same direction and the road is congested, you can drive on the most right vehicle lane.		false	When there are three or more vehicle lanes in the same direction, the far right vehicle lane is left open for overtaking, passing and turning right.
 I drove in the slower traffic lane on an expressway at 20km/h.		true	correct
 When your car becomes overheated, you should stop your car immediately and remove a radiator cap.		false	When the car becomes overheated, drivers should pull over the car safety area, open a bonnet and leave the engine running.
@@ -745,7 +745,7 @@ When the bus stops to drop off infants or pupils, you may proceed while slowing 
 Two vehicles collide as an accident but both parties did negotiate about it. It wont be necessary to report the accident to a police then.		false	Drivers must report the accident to a police when a traffic accident occurs.
 When you cross the railway crossing, it is better to change your gears to prevent your vehicle from stalling on the railway crossing.		false	In order to prevent your vehicle from stalling on the railway crossing, proceed in low gear at a constant speed.
 When you turning right with your motorcycle, you must make square right turn.		false	When you turning right with motorcycle, you can make a turn right directly same as regular vehicle.
-Brinking red traffic light, driver must do temporarily stop, do check safety and then proceed.		true	correct
+Blinking red traffic light, driver must do temporarily stop, do check safety and then proceed.		true	correct
 It was near top of a hill or steep downgrade, I passed beside a moped which was driving in front of me.		false	Changing lanes to overtake or pass another motor vehicle or moped is prohibited in these locations. But It is permitted to overtake or pass a light vehicle.
 When you pass by on a slope, a vehicle going up the slope should give way to the vehicle going down the slope.		false	As starting on a steep upgrade is defficult, vehicles on the downgrade should yield.
 You must keep a distance between vehicles about 50 meters when you are driving at 100km/h on expressway.		false	The safe distance between vehicles is calculated by converting speed to meters. So in this case, the driver must keep a distance about 100 meters when you are driving at 100km/h on expressway.
@@ -756,7 +756,7 @@ This sign indicates `Left turn permitted`.	img-x-original-x-01-x-E-x-6標示板-
 ☆When we check the seating capacity of a car, 3 children below 12 years old are considered as 2 adults.		true	correct
 ☆When driving, it is advisable to move our eyes constantly rather than concentrating our eyes on just one spot.		true	correct
 When driving a moped, we can have one passenger on the rear seat.		false	The seating capacity of a moped is one, so we must not have passengers on a moped.
-☆As there was no pedestrians nearby, I crossed the sidewalk without stopping.		false	Even if there are no pedestrians nearby, we must stop just before crossing the sidewalk and side stip.
+☆As there were no pedestrians nearby, I crossed the sidewalk without stopping.		false	Even if there are no pedestrians nearby, we must stop just before crossing the sidewalk and side stip.
 ☆Even if we drink a small amount of alcohol, we must not drive.		true	correct
 This sign means “No entry for vehicles”.	img-x-original-x-01-x-A-x-1規制-03車両進入禁止.jpg	true	correct
 Motorcycles with a total engine displacement of less than 125cc can be driven with regular vehicles license.		false	With regular vehicle license, we can drive regular motor vehicles, special light equipments and mopeds.
@@ -787,7 +787,7 @@ In the middle of the curve, we need to control the speed without disengaging the
 This sign indicates “One way”.	img-x-original-x-01-x-E-x-6標示板-02左折可.jpg	false	This sign indicates ”Left turn permitted”.
 During an emergency evacuation, you opened the windows and took the key.		false	During an emergency evacuation, we must close the windows and leave the key in the ignition.
 ☆When we drive regular passenger vehicles (excluding three - wheel vehicles)  for private use, we must take the regular inspection every 12 months.		true	correct
-If the road has this road marking, vehicles are allowed to travel.	img-x-original-x-03-x-A-x-7規制標示-08停止禁止部分.jpg	true	correct  This road marking indicates ”No stopping zone.”, so vehicles can travel on it.If there is a possibility vehicles may stop on this road marking due to the conditons ahead, we must not enter this area.
+If the road has this road marking, vehicles are allowed to travel.	img-x-original-x-03-x-A-x-7規制標示-08停止禁止部分.jpg	true	This road marking indicates ”No stopping zone.”, so vehicles can travel on it.If there is a possibility vehicles may stop on this road marking due to the conditons ahead, we must not enter this area.
 ☆We must slow down before entering tunnels because of dark adaptation.		false	Before entering tunnels, we should reduce speed because of dark adaptation.
 This sign indicates ”Pedestrian crossing.”	img-x-original-x-01-x-C-x-3警戒-12学校・幼・保.jpg	false	This sign indicates ”School, Kindergarten, Nursery.”
 When you drop your load on the expressway, you should use the emergency phone and call for assistance.		true	correct
@@ -826,7 +826,7 @@ You chose a motorcycle that could do figure eights but could not use the center 
 ☆The timing of giving signals to make a left turn and right turn is 3 seconds before the turn.		false	The timing of giving signals to make a left turn and right turn is 30 meters before the turn.
 ☆This sign indicates ”No right turn.”	img-x-original-x-01-x-A-x-1規制-14車両横断禁止.jpg	false	This sign indicates ”No crossing.”
 When moped riders make a square right turn, they do not need to give the signal.		false	When making a square right turn, we must signal. We must start to signal to the right 30m before the intersection and then we must turn off the signal after we cross the first intersection.
-☆On a one-way road,we can park vehicles on the right side of the road.		false	Even if we park on a one way road, we must park on the left side of the road.
+☆On a one-way road, we can park vehicles on the right side of the road.		false	Even if we park on a one way road, we must park on the left side of the road.
 On a slope, because it is more difficult to start on an uphill, vehicles on a downhill should yield to the vehicle on an uphill.		true	correct
 ☆When passing the oncoming vehicle with a high beam, I turned off the headlight.		false	When passing the oncoming vehicle, we must dim our headlight or switch it to low beam.
 Mopeds can drive on the exclusive lane for buses.		true	correct
@@ -839,7 +839,7 @@ The road with this sign is close to all vehicles, pedestrians and street cars.	i
 This sign means “ Railway crossing”.	img-x-original-x-01-x-C-x-3警戒-11踏切2.jpg	true	correct
 When a school bus is stopping to pick up or drop off pupils, drivers can pass without slowing down.		false	When a school bus is stopping, drivers must slow down and check safety.
 When driving near the crest of a hill, drivers are required to slow down.		true	correct
-In the traffic accidents, the emergency frist aid treatment should be provided.In this case, if there is a chance of further accidents, we must move the injured person to a safe location.		true	correct
+In the traffic accidents, the emergency first aid treatment should be provided. In this case, if there is a chance of further accidents, we must move the injured person to a safe location.		true	correct
 Japanese driver’s license is classified into class one driver’s license, class two driver’s license, and moped license.		false	Japanese driver’s license is classified into class one driver’s license, class two driver’s license, and learner’s permit.
 You are allowed to park within 5m from an intersection, but you are allowed to stop.		false	Within 5m from an intersecton, you must not park and stop.
 The emergency vehicle is approaching from behind on one way road, I pulled over to the right hand side as it is better for the emergency vehicle to travel on the left side of the road.		true	This answer is correct.
@@ -879,7 +879,7 @@ I parked on a road without a side strip leaving 50cm on the left edge of the roa
 I leave my vehicle for a short time only, so I just put on the side brake and leave the engine on.		false	When a driver leaves a vehicle, stop the engine, shift the gear into a first or reverse, shift the P for AT, use the parking/side brake and remove the key.
 The exhaust gas emitted by car engines contains harmful substances including carbon monoxide, hydrocarbon, nitrogen oxide which cause air pollution. When there is a risk of smog being generated in the summer, avoid using your car.		true	This is a correct answer.
 You can stop or park a vehicle within 10m from railway crossings.		false	You can not stop or park a vehicle on the railway crossing and within 10m from the railway crossing.
-It is very dangerous to start with an automatic transemission car without looking at the gearshift.		true	This is a correct answer.
+It is very dangerous to start with an automatic transmission car without looking at the gearshift.		true	This is a correct answer.
 You are not allowed to overtake on the left side of a car, except that car in front of you is going to make a right turn.		true	This is a correct answer.
 If your car breaks down on a rail road crossing, and you do not have any emergency flares, you should burn material that emits smoke.		true	This is a correct answer.
 You only use your rear brake if you need to stop suddenly when riding a motorcycle.		false	Sudden braking on a motorcycle may lock the wheels causing you skid. Apply the front and rear brake simultaneously several times.
@@ -930,8 +930,8 @@ Overtaking is prohibited within 30m of a bus stop.		false	Overtaking is not proh
 When driving at high speed, you should press the brake some time to test the brake function.		true	This answer is correct.
 Motorcyclists should avoid for riding into deep puddles, because water will enter in their brakes and their brakes power may lose.		true	This answer is correct.
 The speed at which vehicles travel and fuel consumption are closely related. Traveling too fast or too slow consumes more fuel than other levels of speed.		true	Sudden starting and idling also consumes fuel unnecessarily.
-During a major earthquake you remove your car from the road and leave it with key in the ignition and the doors unlocked.		true	When a major eathquake occurs while you are driving, pull over to the left hand side of the road as safe method as possible. Take proper actions in accordance with the situation around you. When you evacuate, move your vehicle to a space off the road if you can. When you have to leave your vehicle on the road unavoidably, pull over to the left hand side of the road, turn off the engine and leave the key in the engine. And close the windows, unlock the doors and carry valuables with you.
-You may park your vehicle on the road during the day for 8 hours in all the day.		false	When parking a vehicle on the road without parking and sttopping prohibited area, parking for 12 hours or more continuously on the same spot is prohibited or 8 hours or more at night.
+During a major earthquake you remove your car from the road and leave it with key in the ignition and the doors unlocked.		true	When a major earthquake occurs while you are driving, pull over to the left hand side of the road as safe method as possible. Take proper actions in accordance with the situation around you. When you evacuate, move your vehicle to a space off the road if you can. When you have to leave your vehicle on the road unavoidably, pull over to the left hand side of the road, turn off the engine and leave the key in the engine. And close the windows, unlock the doors and carry valuables with you.
+You may park your vehicle on the road during the day for 8 hours in all the day.		false	When parking a vehicle on the road without parking and stopping prohibited area, parking for 12 hours or more continuously on the same spot is prohibited or 8 hours or more at night.
 When you wear a helmet, it must have a PS mark or JIS mark.		true	Correct
 Having a regular motorcycle license for 1 year and a large motorcycle license for 1 year, you can carry a passenger on the expressway.		false	If the driver is 20 years or older and acquired his large/regular motorcycle license more than 3 years, who can ride on the expressway with a passenger.
 It is allowed to wear the helmet using for construction when driving a motorcycle.		false	Safety helmets inteded for construction use are not acceptable as crash helmets.
