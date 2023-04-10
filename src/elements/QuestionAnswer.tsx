@@ -42,7 +42,7 @@ export default function QuestionAnswer(props: Props) {
                     <p className='text-slate-200'>{question.question}</p>
                     {question.img != "" &&
                         <div className="grid w-full place-items-center mt-5">
-                            <img src={"images/" + question.img} alt="traffic sign" height="200" width="200" />
+                            <img src={"images/" + question.img} alt="traffic sign" />
                         </div>
                     }
 
