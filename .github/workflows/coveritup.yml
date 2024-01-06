@@ -1,0 +1,57 @@
+on: [push, pull_request]
+name: Cover It Up
+jobs:
+  coveritup:
+    strategy:
+      matrix:
+        node-versions: [20]
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js ${{ matrix.node-versions }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-versions }}
+
+      - name: NPM Install Time
+        run: |
+          BUILD_START=$SECONDS
+          npm install
+          echo SCORE=$(($SECONDS-BUILD_START)) >> "$GITHUB_ENV"
+      - uses: kevincobain2000/action-coveritup@v1
+        with:
+          type: npm-install-time
+
+      - name: Build
+        run: |
+          BUILD_START=$SECONDS
+          npm run build
+          echo SCORE=$(($SECONDS-BUILD_START)) >> "$GITHUB_ENV"
+
+      - uses: kevincobain2000/action-coveritup@v1
+        with:
+          type: node-build-time
+      - name: Coveritup
+        run: |
+          curl -sLk https://raw.githubusercontent.com/kevincobain2000/cover-totalizer/master/install.sh | sh
+          echo SCORE=`./cover-totalizer coverage.xml` >> "$GITHUB_ENV"
+
+      - name: Number of dependencies
+        run: |
+          echo SCORE=`npm ls --parseable | wc -l` >> "$GITHUB_ENV"
+      - uses: kevincobain2000/action-coveritup@v1
+        with:
+          type: npm-dependencies
+
+
+      - name: Node Modules Size
+        run: echo SCORE=`du -sm node_modules/ | awk '{print $1}'` >> "$GITHUB_ENV"
+      - uses: kevincobain2000/action-coveritup@v1
+        with:
+          type: npm-modules-size
+
+      - uses: kevincobain2000/action-coveritup@v1
+        with:
+          pr_comment: true
+
