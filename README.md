@@ -1,3 +1,7 @@
+[![Badge](https://coveritup.app/embed/kevincobain2000/japan-drivers-license-practice-test-questions-english?branch=master&type=npm-install-time)](https://coveritup.app/kevincobain2000/japan-drivers-license-practice-test-questions-english)
+[![Badge](https://coveritup.app/embed/kevincobain2000/japan-drivers-license-practice-test-questions-english?branch=master&type=npm-modules-size)](https://coveritup.app/kevincobain2000/japan-drivers-license-practice-test-questions-english)
+
+
 ## Japanese drivers license practice test questions in English
 
 Questions last updated: 2023
